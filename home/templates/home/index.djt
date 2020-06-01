@@ -1,0 +1,10 @@
+{% extends "home/base.djt"%} {%load static%} {%block content%}
+
+
+<div class="container padd-all">
+    <h1>
+
+        You<br>make<br>the game <img alt="League and tournament management - Sport &amp; Game" src="https://static.leverade.com/img/new-home/index-en-1-1.svg">
+
+    </h1>
+    <a class="btn" href={% url "signup" %}>Create account </a> {%endblock content%}

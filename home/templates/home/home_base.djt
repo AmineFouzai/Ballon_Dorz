@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href={% static "home/css/home.css" %} media="all" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <ul>
+                <li>
+                    <img src={% static 'home/images/Slog.png'%}>
+                    </li>
+                <li>
+                    <p class="logo">ballon-dorz</p>
+                </li>
+            <li>
+                <a href="">Go to admin panel </a>
+            </li>
+<li>
+<img src={% static "home/images/profile.png" %} class="img-circle">
+<span class="visible-xs-inline">Constantine__007</span>
+</li>
+
+            </ul>
+        </nav>
+    </header>
+    {%block content%} {%endblock content%}
+
+    <div class="push"></div>
+    <script src="https://kit.fontawesome.com/eed1138c91.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
