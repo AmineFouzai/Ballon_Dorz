@@ -1,0 +1,15 @@
+{% extends 'accounts/base.djt'%} {% load static %} {%block content%}
+<link href={% static "accounts/css/Signup.css" %} media="all" type="text/css" rel="stylesheet">
+<div class="form-continer">
+    <form aciton={% url 'signup' %} method="POST">
+        {%csrf_token%} {{form}}
+        <div class="terms">
+            <input class="accepter" type="checkbox" required>
+
+            <p class="terms-text">I accept the <a href="#">terms and conditions</a></p>
+        </div>
+        <button type="submit">Singup</button>
+    </form>
+    <a class="btn" href={% url 'login' %}> I already have an account</a>
+</div>
+{%endblock content%}

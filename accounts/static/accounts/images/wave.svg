@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1163.5 834.5">
+    <defs>
+        <style>
+            svg path {
+                fill: url(#linear-gradient);
+                box-shadow: ;
+                d: path("M756,1080l1163.5-.5v-834c-1.91,92.4-58.33,172.83-124.5,199.5-67,27-131,81-180,190-56.5,136.5-231,170-403.5,191.5S888,893,756,1080Z");
+                animation: morph 5s alternate infinite linear;
+            }
+
+            @keyframes morph {
+                from {
+                    d: path("M756,1080l1163.5-.5v-834c-1.91,92.4-58.33,172.83-124.5,199.5-67,27-131,81-180,190-56.5,136.5-231,170-403.5,191.5S888,893,756,1080Z");
+                }
+
+                to {
+                    d: path("M756,1080l1163.5-.5v-834C1900,264,1831,314,1808,386c-29,79,31,219-193,249-153,9-270,14-403.5,191.5S1139,998,756,1080Z");
+                }
+            }
+        </style>
+        <linearGradient id="linear-gradient" x1="1733.54" y1="394.22" x2="1141.12" y2="1420.33" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#f9c000">
+                <animate attributeName="stop-color" values="#f9c000; #f9c000; #f9c000" dur="5s" repeatCount="indefinite"></animate>
+            </stop>
+            <stop offset="100%" stop-color="#f9c000">
+                <animate attributeName="stop-color" values="#f9c000; #f9c000; #f9c000" dur="5s" repeatCount="indefinite"></animate>
+            </stop>
+        </linearGradient>
+    </defs>
+    <path d="M756,1080l1163.5-.5v-834c-1.91,92.4-58.33,172.83-124.5,199.5-67,27-131,81-180,190-56.5,136.5-231,170-403.5,191.5S888,893,756,1080Z" transform="translate(-756 -245.5)" />
+</svg>
