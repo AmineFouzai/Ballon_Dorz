@@ -34,8 +34,8 @@ ALLOWED_HOSTS = []
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'rooksdjango@gmail.com'
-EMAIL_HOST_PASSWORD = 'djangodjango'
+EMAIL_HOST_USER = 'example@gmail.com'
+EMAIL_HOST_PASSWORD = 'example'
 EMAIL_PORT = 587
 
 # Application definition
@@ -89,11 +89,11 @@ WSGI_APPLICATION = 'match_app.wsgi.application'
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'match',
-        'USER':'sgpostgres',
-        'PASSWORD':'SxVCyRsbsZ!3QMFS',
-        'HOST':'SG-constantine-640-pgsql-master.servers.mongodirector.com',
-        'PORT':'5432'
+        'NAME': 'db_name',
+        'USER':'db_root',
+        'PASSWORD':'db_root_pass',
+        'HOST':'db_host',
+        'PORT':'db_port'
     }
 }
 
