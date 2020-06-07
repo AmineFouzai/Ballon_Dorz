@@ -1,0 +1,9 @@
+{% extends 'home/home_base.djt' %}
+{% load static %}
+{% block content %}
+<form class="form-continer2" action={% url 'create-group' %} method="POST">
+{% csrf_token %}
+{{form}}
+<button class="btn-create" type="submit">create</button>
+</form>
+{% endblock content %}

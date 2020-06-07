@@ -1,1 +1,99 @@
-{% extends 'home/home_base.djt' %}{% load static%} {%block content%} {%endblock content%}
+{% extends 'home/home_base.djt' %}{% load static%} {%block content%}
+<div class="home-container" >
+
+<section id="main">
+      <div class="container">
+        <div class="row">
+<div class="col-md-3">
+            <div class="list-group">
+              <a href="index.html" class="list-group-item active main-color-bg">
+                </span> Dashboard
+              </a>
+              <a href={% url "create-team"%} class="list-group-item"> Teams <span class="badge">{{teams}}</span></a>
+              <a href={% url "create-group"%} class="list-group-item">Group of Teams <span class="badge">{{group_teams}}</span></a>
+            </div>
+
+            <div class="well">
+              <h4>Disk Space Used</h4>
+              <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                      40%
+              </div>
+            </div>
+            <h4>Bandwidth Used </h4>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                    20%
+            </div>
+          </div>
+            </div>
+          </div>
+
+          <div class="col-md-9">
+            <!-- Website Overview -->
+            <div class="panel panel-default">
+              <div class="panel-heading main-color-bg">
+                <h3 class="panel-title">Website Overview</h3>
+              </div>
+
+              <div class="panel-body">
+{% comment %}                 
+                <div class="col-md-3">
+                  <div class="well dash-box">    
+                    <h4>Users</h4>
+                  </div>
+                </div>
+                
+                <div class="col-md-3">
+                  <div class="well dash-box">
+                
+                    <h4>Pages</h4>
+                  </div>
+                </div> {% endcomment %}
+              
+              {% autoescape off %}
+              {{div}}
+              {% endautoescape %}
+
+              </div>
+              </div>
+
+              <!-- Latest Users -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Latest Users</h3>
+                </div>
+                <div class="panel-body">
+                  <table class="table table-striped table-hover">
+                      <tbody><tr>
+                        <th>Group</th>
+                        <th>Team</th>
+                        <th>Joined</th>
+                        <th>Details</th>
+                        <th></th>
+                      </tr>
+                      {% for group in groups %}
+                      <tr>
+                        <td>{{group.name}}</td>
+                        <td>{{group.teams}}</td>
+                        <td>{{group.date}}</td>
+                        <td><a href={% url "more" group.id %}>more</a><td/>
+                      </tr>
+                      {% endfor %}
+                    </tbody></table>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bokeh/2.0.2/bokeh.min.js" crossorigin="anonymous"></script>
+    
+
+    
+    {% autoescape off %}
+      {{script}}
+    {% endautoescape %}
+              
+{%endblock content%}

@@ -1,0 +1,100 @@
+{% extends "home/home_base.djt" %}
+{% load static %}
+{% block content%}
+
+<form class="form-continer2" action={%url "more" group.id %} method="POST">
+{% csrf_token %}
+
+<table border="2" class="read-more" >
+<tr>
+<td>
+<label><h2>Group Name:</h2></label>
+</td>
+<td class="read-more-td">
+<label><h3>{{group}}</h3></label>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<label><h2>Team Name:</h2></label>
+</td>
+<td>
+<label><h3>{{team.name}}</h3></label>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<label><h2>Team Matchs:</h2></label>
+</td>
+<td>
+<label><h3>{{team.nb_match}}</h3></label>
+</td>
+</tr>
+
+<tr>
+<td>
+<label><h2>Team Totale Points:</h2></label>
+</td>
+<td>
+<label><h3>{{team.totale_points}}</h3></label>
+</td>
+</tr>
+
+<tr>
+<td>
+
+<label><h2>Team Victorys:</h2></label>
+</td>
+<td>
+
+<label><h3>{{team.nb_victoir}}</h3></label>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<label><h2>Team Defeats:</h2></label>
+</td>
+<td>
+<label><h3>{{team.nb_defait}}</h3></label>
+</td>
+</tr>
+
+<tr>
+<td>
+<label><h2>Team Match Null:</h2></label>
+</td>
+<td>
+<label><h3>{{team.nb_match_null}}</h3></label>
+</td>
+</tr>
+
+<tr>
+<td>
+<label><h2>Team Goals:</h2></label>
+</td>
+<td>
+<label><h3>{{team.but_marque}}</h3></label>
+</td>
+</tr>
+
+<tr>
+<td>
+<label><h2>Team Concede:</h2></label>
+</td>
+<td>
+<label><h3>{{team.but_concede}}</h3></label>
+</td>
+</tr>
+
+
+</table>
+<button class="btn-create" type="submit">delete</button>
+</form>
+
+{% endblock content%}

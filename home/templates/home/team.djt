@@ -1,0 +1,16 @@
+{% extends "home/home_base.djt" %}
+{% load static %}
+
+{% block content %}
+
+<div class="home-container ">
+<form class="form-continer" action={% url "create-team"%} method="POST">
+{% csrf_token %}
+{{form}}
+
+<button class="btn-create" type="submit"> Create</button>
+
+</form>
+</div>
+
+{% endblock content %}

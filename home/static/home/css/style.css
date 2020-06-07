@@ -1,0 +1,16 @@
+body {
+    background: #f3f3f3 !important;
+}
+
+
+/* Custom */
+
+.main-color-bg {
+    background-color: #f9c000 !important;
+    border-color: #f9c000 !important;
+    color: #ffffff !important;
+}
+
+.progress-bar {
+    background-color: #f9c000 !important;
+}
