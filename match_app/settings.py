@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from django.urls import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,17 +26,21 @@ SECRET_KEY = '*!#s492r6o$d49#pojpz8!drjdx7_+_2v^_h%1$4gapf9!r4c9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+LOGIN_URL = 'accounts.views.Login_Request_Handler'
+
+
 ALLOWED_HOSTS = []
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'example@gmail.com'
-EMAIL_HOST_PASSWORD = 'example'
+EMAIL_HOST_USER = 'logeddata@gmail.com'
+EMAIL_HOST_PASSWORD = 'logdatatxt'
 EMAIL_PORT = 587
 
 # Application definition
 
 INSTALLED_APPS = [
+   
     'home.apps.HomeConfig',
     'accounts.apps.AccountsConfig',
     'django.contrib.admin',
