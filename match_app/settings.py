@@ -28,7 +28,7 @@ SECRET_KEY = '*!#s492r6o$d49#pojpz8!drjdx7_+_2v^_h%1$4gapf9!r4c9'
 DEBUG = True
 
 LOGIN_URL = 'accounts.views.Login_Request_Handler'
-
+DISABLE_COLLECTSTATIC=1
 
 ALLOWED_HOSTS = []
 
