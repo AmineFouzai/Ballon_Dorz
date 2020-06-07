@@ -34,8 +34,8 @@ ALLOWED_HOSTS = []
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'logeddata@gmail.com'
-EMAIL_HOST_PASSWORD = 'logdatatxt'
+EMAIL_HOST_USER = 'rooksdjango@gmail.com'
+EMAIL_HOST_PASSWORD = 'djangodjango'
 EMAIL_PORT = 587
 
 # Application definition
