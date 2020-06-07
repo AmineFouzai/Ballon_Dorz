@@ -97,8 +97,6 @@ def Home_Hnadler(request):
     p.y_range.start = 0
     p.plot_width = 800
     script,div=components(p)
-    disk = psutil.disk_usage('/')
-    print(disk.total / (1024.0 ** 3))
     context={
         "groups":groups,
         "teams":len(teams),
