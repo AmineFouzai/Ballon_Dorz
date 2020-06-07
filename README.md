@@ -29,3 +29,6 @@ Soccer tournaments mangment app  made with django
 </table>
 
 -------------------------------
+
+# APP:
+[https://ballon-dorz.herokuapp.com/](https://ballon-dorz.herokuapp.com/)
