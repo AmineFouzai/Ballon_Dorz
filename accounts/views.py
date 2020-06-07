@@ -30,7 +30,7 @@ def Login_Request_Handler(request):
         if form.is_valid():
             user=form.get_user()
             login(request,user)
-            return redirect('/',permanent=True)
+            return redirect('home',permanent=True)
         else:
             form=AuthenticationForm()
             context={"form":form,"error":True}
@@ -144,7 +144,7 @@ def Valid_Email_Request_Handler(request,uid,token):
         user.is_active=True
         user.save()
         login(request,user)
-        return redirect('/',permanent=True)
+        return redirect('home',permanent=True)
     else:
         return render(request,'accounts/valid.djt')
    
@@ -152,7 +152,7 @@ def Valid_Email_Request_Handler(request,uid,token):
 def Logout_Request_Hanlder(request):
     if request.method=="POST":
         logout(request)
-        return redirect('login')
+        return redirect('/')
     else:
         logout(request)
-        return redirect('login')
+        return redirect('/')
